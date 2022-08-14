@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;  /* hace que el padding y el border pasen a formar parte del cálculo del ancho de la caja y no lo suman posteriormente: será de la medida que le hemos indicado (por ej width:250px) sin importar si usamos bordes o paddings. */
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  display: flex;   /* to center everything */
+  flex-direction: column; /* to center in the MIDDLE, not in a ROW*/
+  align-items: center;
+  justify-content: center;   /* to middle, both horizontally & veritcally */
+  margin: 0;
+  background-color: #D4F6CC;
+  overflow-x: hidden;
+}
+
+h1 {
+  margin: 10px;
+}
+
+.box {
+  background-color: #9FB4FF;
+  color: #FFFDDE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 200px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);   /* (rojo, verde y azul) y el cuarto es el Alpha, el grado de transparencia u opacidad del color. */
+  transform: translateX(200%);
+  transition: transform 0.4s ease;
+}
+
+.box:nth-of-type(even) {
+  transform: translateX(-200%);
+}
+
+.box.show {
+ transform: translateX(0);
+}
+
+.box h2 {
+  font-size: 45px;
+}
